@@ -1,6 +1,8 @@
 # MyDiaryWithReact
 This is a re-implementation of the mydiary frontend using React
 
+[![Build Status](https://travis-ci.org/Edward-K1/MyDiaryWithReact.svg?branch=develop)](https://travis-ci.org/Edward-K1/MyDiaryWithReact)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
