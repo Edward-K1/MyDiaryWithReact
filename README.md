@@ -2,6 +2,7 @@
 This is a re-implementation of the mydiary frontend using React
 
 [![Build Status](https://travis-ci.org/Edward-K1/MyDiaryWithReact.svg?branch=develop)](https://travis-ci.org/Edward-K1/MyDiaryWithReact)
+[![Coverage Status](https://coveralls.io/repos/github/Edward-K1/MyDiaryWithReact/badge.svg?branch=develop)](https://coveralls.io/github/Edward-K1/MyDiaryWithReact?branch=develop)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
