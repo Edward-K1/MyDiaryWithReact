@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import LandingPage from './components/views/landingPage';
-import NotFound from './components/views/notFound';
+import LandingPage from './views/landingPage';
+import NotFound from './views/notFound';
 
 class App extends Component {
   render() {
