@@ -1,0 +1,16 @@
+.title-text{
+    color: #00008b;
+}
+
+.get-started{
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#loader-div{
+  display: none;
+}
