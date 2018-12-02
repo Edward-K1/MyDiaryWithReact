@@ -2,10 +2,7 @@ import { API_URL } from '../common';
 import { toast } from 'react-toastify';
 import { toggleLoader } from '../common/functions';
 
-
 const registerUser =(user)=> {
-    
-
     let appHeaders = new Headers({
         'Accept':'application/json',
         'Content-Type':'application/json; charset=UTF-8'

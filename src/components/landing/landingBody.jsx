@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const LandingBody = () =>{
   return (
     <div className="container get-started">
-      <div id="get-started">
+      <div id="get-started" className="landing-caption">
         <span className="welcome-text">
             Do your thoughts like to wander?
             <br/>
@@ -12,6 +12,7 @@ const LandingBody = () =>{
             <br/>
         </span>
         <Link to="/signup"><button className="btn btn-primary" id="get-started">Get Started </button></Link>
+        <br />
     </div>
     </div>
   )
