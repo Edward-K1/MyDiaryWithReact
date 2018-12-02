@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NotFound = ()=> {
   return (
-    <div>
-        <h2>404: Path not found</h2>
+    <div className="not-found welcome-text">
+        <h4>404. Resource not found</h4>
+        <Link to="/">Go Back to My Diary</Link>
+
     </div>
   )
 }
