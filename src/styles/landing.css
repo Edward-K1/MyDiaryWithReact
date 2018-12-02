@@ -31,3 +31,9 @@
   justify-content: center;
   height: 60%;
 }
+
+.landing-caption{
+  height: 50%;
+  align-items: center;
+  justify-content: center;
+}
