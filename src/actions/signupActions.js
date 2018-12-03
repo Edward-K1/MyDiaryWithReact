@@ -1,17 +1,13 @@
 import { API_URL } from '../common';
 import { toast } from 'react-toastify';
-import { toggleLoader } from '../common/functions';
+import { toggleLoader, showErrorMsg } from '../common/functions';
+import { DEFAULT_HEADERS } from '../common';
 
-const registerUser =(user)=> {
-    let appHeaders = new Headers({
-        'Accept':'application/json',
-        'Content-Type':'application/json; charset=UTF-8'
-    })
-
+const registerUser = async (user)=> {
 
     fetch(API_URL + '/auth/signup', {
         method: 'POST',
-        headers:appHeaders,
+        headers:DEFAULT_HEADERS,
         body: JSON.stringify(user),
      })
      .then(response =>
@@ -26,28 +22,17 @@ const registerUser =(user)=> {
                 position: toast.POSITION.TOP_CENTER,
                 hideProgressBar:true
               })
-               toggleLoader('loader-div');
                setTimeout(function () {
                             window.location.replace('/login');
                             },1000);
 
-           }else if(results.status === 400){
+           } else {
                 let msg = JSON.stringify(results.data['message']['error'])
-                toast.error(msg,{
-                    position: toast.POSITION.TOP_CENTER,
-                    hideProgressBar:true
-                  })
-                toggleLoader('loader-div');
+                showErrorMsg(msg);
 
-           }else if(results.status === 409){
-                let msg = JSON.stringify(results.data['message'])
-                toast.error(msg,{
-                    position: toast.POSITION.TOP_CENTER,
-                    hideProgressBar:true
-                  })
-                toggleLoader('loader-div');
            }
-        }).catch(error => console.log(error));
+        })
+        toggleLoader('loader-div');
 
 }
 

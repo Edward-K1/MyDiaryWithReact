@@ -5,9 +5,9 @@ import NotFound from './views/notFound';
 import Signup from './components/signup/signup';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
-import HomePage from './views/home';
 import Login from './components/login/login';
-
+import EntriesPage from './views/entriesPage';
+import CreateEntry from './components/diary/createEntry';
 class App extends Component {
   render() {
     return (
@@ -18,9 +18,9 @@ class App extends Component {
             <Route exact path="/" component={LandingPage} />
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/login" component={Login} />
-            <Route exact path="/home" component={HomePage} />
-            <Route exact path="/profile" component={LandingPage} />
-            <Route exact path="/entries" component={LandingPage} />
+            <Route exact path="/home" component={EntriesPage} />
+            <Route exact path="/entry/create" component={CreateEntry} />
+            <Route exact path="/entry/:int/edit" component={CreateEntry} />
             <Route component={NotFound} />
           </Switch>
         </Router>

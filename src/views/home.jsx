@@ -1,9 +1,10 @@
 import React from 'react';
+import EntriesPage from './entriesPage';
 
 const HomePage = ()=> {
   return (
     <div>
-        My Diary Homepage
+        <EntriesPage />
       
     </div>
   )

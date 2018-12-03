@@ -3,7 +3,7 @@ import { ToastContainer } from 'react-toastify';
 import { Link } from 'react-router-dom';
 import '../../styles/signup.css';
 import registerUser from '../../actions/signupActions';
-import { toggleLoader } from '../../common/functions';
+import { toggleLoader, showErrorMsg } from '../../common/functions';
 import Loader from 'react-loader-spinner';
 
 class Signup extends Component {
@@ -27,6 +27,10 @@ class Signup extends Component {
       }
     onSubmit(evt) {
         evt.preventDefault();
+        if(this.state.password !== this.state.confirmpass){
+          showErrorMsg("The passwords do not match");
+          return
+        }
         const user = {
           firstname: this.state.firstname,
           lastname: this.state.lastname,
