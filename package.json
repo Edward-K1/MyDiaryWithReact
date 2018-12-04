@@ -34,5 +34,12 @@
   ],
   "devDependencies": {
     "axios-mock-adapter": "^1.15.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**",
+      "!src/index.js"
+    ]
   }
 }
+

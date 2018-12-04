@@ -1,0 +1,19 @@
+.entries-body{
+    color: #000;
+    background-image: none;
+}
+#entry-text-submit,#cancel-text-entry{
+    width: 45%;
+}
+.center-content{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+#content-body-text{
+    height: 80vh;
+}
+
+.blue-body{
+    background-color: #007bff;
+}

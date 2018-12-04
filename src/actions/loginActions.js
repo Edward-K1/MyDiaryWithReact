@@ -1,18 +1,12 @@
 import { API_URL } from '../common';
-import { toast } from 'react-toastify';
-import { toggleLoader } from '../common/functions';
+import { toggleLoader, showErrorMsg } from '../common/functions';
+import { DEFAULT_HEADERS } from '../common';
 
 const loginUser =(credentials)=> {
-    
-    let appHeaders = new Headers({
-        'Accept':'application/json',
-        'Content-Type':'application/json; charset=UTF-8'
-    })
-
 
     fetch(API_URL + '/auth/login', {
         method: 'POST',
-        headers:appHeaders,
+        headers:DEFAULT_HEADERS,
         body: JSON.stringify(credentials),
      })
      .then(response =>
@@ -27,11 +21,8 @@ const loginUser =(credentials)=> {
             window.location.replace('/home')
 
         }else{
-            let msg ="Invalid login Credencials";
-            toast.error(msg,{
-                position: toast.POSITION.TOP_CENTER,
-                hideProgressBar:true
-              })
+            let msg ="Invalid login Credentials";
+            showErrorMsg(msg, 1500);
             toggleLoader('loader-div');
             }
 
