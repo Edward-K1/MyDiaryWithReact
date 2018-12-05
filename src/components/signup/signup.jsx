@@ -42,7 +42,6 @@ class Signup extends Component {
         registerUser(user)
       }
 
-    
   render() {
     return (
         <div className="container get-started">
