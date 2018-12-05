@@ -33,8 +33,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "axios-mock-adapter": "^1.15.0",
-    "jest-fetch-mock": "^2.0.1"
+    "axios-mock-adapter": "^1.15.0"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -43,3 +42,4 @@
     ]
   }
 }
+

@@ -30,6 +30,7 @@ export const deleteEntry = async (eid) => {
         method: 'DELETE',
         headers:HEADERS_WITH_TOKEN,
      })
+    return response.json();
 
 }
 

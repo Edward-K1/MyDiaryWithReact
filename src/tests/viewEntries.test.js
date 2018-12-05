@@ -12,9 +12,7 @@ const testEntries = [
 it('renders without crashing',()=> {
     const wrapper = shallow(<Router><ViewEntries /></Router>);
     wrapper.setState({entries: testEntries})
-    const handleDelete= jest.fn()
-    wrapper.instance().handleDelete = handleDelete
-    wrapper.instance().handleDelete(1);
+    
 })
 
 it('tests single entry component', ()=>{
@@ -23,12 +21,11 @@ it('tests single entry component', ()=>{
         title='title 1'
         body='body'
         createdAt='28-June-2018'
-        editEntry={jest.fn}
+        getEntry={jest.fn}
         deleteEntry={jest.fn}
         id='1'
           />
         </Router>);
         expect(wrapper.find('#delete-1').simulate('click'));
-        expect(wrapper.find('#edit-1').simulate('click'));
         
 })
