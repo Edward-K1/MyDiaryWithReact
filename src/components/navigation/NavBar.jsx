@@ -6,7 +6,7 @@ const  NavBar = () => {
   return (
     <div className="navbar navbar-dark bg-primary">
     <Link to ="/entry/create"><button className="btn btn-primary">Write New Entry</button></Link>
-    <button className="btn btn-primary" onClick={()=> logOut()}>Logout</button>
+    <button id="logout-btn" className="btn btn-primary" onClick={()=> logOut()}>Logout</button>
       
     </div>
   )
