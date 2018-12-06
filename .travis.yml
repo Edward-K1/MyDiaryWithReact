@@ -6,7 +6,10 @@ cache:
     - node_modules
 script:
   - npm install coveralls
+  - npm install -g codeclimate-test-reporter
   - npm test -- --coverage
 after_success:
+  - npm run coverage
+  - codeclimate-test-reporter < ./coverage/lcov.info
   - npm run coveralls
   
