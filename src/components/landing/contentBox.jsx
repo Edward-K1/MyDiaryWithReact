@@ -8,7 +8,6 @@ const ContentBox = () => {
     <div className='landing-body'>
         <Header />
         <LandingBody />
-      
     </div>
   )
 }
